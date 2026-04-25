@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nextstrain/nextclade/refs/heads/release/packages/nextclade-schemas/input-pathogen-json.schema.json",
+  "schemaVersion": "3.0.0",
+  "files": {
+    "reference": "NC_001538.fasta",
+    "pathogenJson": "pathogen.json",
+    "genomeAnnotation": "NC_001538.gff3",
+    "tree": "BK.json",
+    "examples": "50_random_20260424.fasta",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md"
+  },
+  "attributes": {
+    "name": "BK Virus",
+    "reference name": "BK polyomavirus, complete genome",
+    "reference accession": "NC_001538.1"
+  },
+  "qc": {
+    "missingData": {
+      "enabled": true,
+      "missingDataThreshold": 500,
+      "scoreBias": 500
+    },
+    "snpClusters": {
+      "enabled": true,
+      "windowSize": 100,
+      "clusterCutOff": 6
+    },
+    "mixedSites": {
+      "enabled": true,
+      "mixedSitesThreshold": 15
+    },
+    "privateMutations": {
+      "enabled": true,
+      "typical": 8,
+      "cutoff": 30
+    },
+    "frameShifts": {
+      "enabled": true
+    },
+    "stopCodons": {
+      "enabled": true
+    }
+  },
+    "alignmentParams": {
+        "alignmentPreset": "high-diversity"
+    }
+}
